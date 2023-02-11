@@ -1,13 +1,120 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+* {
+margin: 0;
+padding: 0;
+    font-family: 'Roboto', sans-serif;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#root {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to right, #e66464d9, #9198e5fa, rgba(218, 38, 212, 0.725), rgba(210, 36, 97, 0.582));
+    background-size: 400% 400%;
+    animation: rotateGradient 10s ease infinite;
+}
+
+.appWrapper {
+    width: 95%;
+    height: 95%;
+    background-color: #fff;
+    border-radius: 20px;
+}
+
+@keyframes rotateGradient {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.imgWrapper {
+    margin-top: 20px;
+    margin-left: 20px;
+    width: 250px;
+    border-radius: 100%;
+    overflow: hidden;
+}
+
+.imgWrapper img {
+    width: 100%;
+    aspect-ratio: 1/1;
+    transform: scale(1.4);
+    /* transform: translateY(-5%); */
+    border-radius: 100%;
+}
+
+.nameLabel {
+    margin-left: 20px;
+    display: flex;
+    align-items: center;
+    font-size: 1.2rem;
+}
+
+#verify {
+    margin-left: 20px;
+    color: rgb(17, 209, 209);
+}
+
+.location {
+    margin: 20px 0 20px 20px;
+    font-weight: 300;
+}
+
+main h2 {
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+
+main div {
+    margin-left: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+main div span {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(17, 209, 209);
+    color: #fff;
+    width: 100px;
+    height: 30px;
+    border-radius: 10px;
+    transition: box-shadow 250ms linear;
+}
+main div span:hover{
+    box-shadow: 2px 2px 5px #09caf5b6;
+    cursor: pointer;
+}
+
+footer {
+    margin-left: 20px;
+    margin-top: 40px;
+    display: flex;
+    gap: 10px;
+}
+
+#darkMode{
+    cursor: pointer;
 }
